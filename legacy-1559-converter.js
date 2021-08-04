@@ -9,8 +9,8 @@ const _normalizeToLegacyTransaction =  (newTx) => {
 
 const _normalizeTo1559Transacion = (legacyTx) => {
     const normalized1559Tx = Object.assign({}, legacyTx);
-    normalized1559Tx.maxPriorityFeePerGas = newTx.gasPrice;
-    normalized1559Tx.maxFeePerGas = newTx.gasPrice;
+    normalized1559Tx.maxPriorityFeePerGas = legacyTx.gasPrice;
+    normalized1559Tx.maxFeePerGas = legacyTx.gasPrice;
     return normalized1559Tx;
 }
 
